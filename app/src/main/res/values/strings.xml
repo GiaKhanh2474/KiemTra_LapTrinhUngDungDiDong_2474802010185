@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">KiemTra_LapTrinhUngDungDiDong_2474802010185</string>
+    <string name="error_empty_input">Vui lòng nhập đầy đủ Email và Mật khẩu!</string>
+    <string name="error_invalid_email">Email không đúng định dạng!</string>
+    <string name="error_short_password">Mật khẩu phải có ít nhất 6 ký tự!</string>
+    <string name="success_login">Xác thực thành công!</string>
+</resources>
