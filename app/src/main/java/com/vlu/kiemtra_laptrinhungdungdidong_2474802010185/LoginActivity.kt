@@ -1,5 +1,5 @@
 package com.vlu.kiemtra_laptrinhungdungdidong_2474802010185
-
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Patterns
@@ -39,8 +39,14 @@ class LoginActivity : AppCompatActivity() {
                     tvStatus.setText(R.string.error_short_password)
                 }
                 else -> {
-                    tvStatus.setTextColor("#2E7D32".toColorInt())
-                    tvStatus.setText(R.string.success_login)
+                    tvStatus.setTextColor(Color.parseColor("#2E7D32"))
+                    tvStatus.text = "Xác thực thành công!"
+
+                    // 2.3 & 2.4: Khởi tạo Explicit Intent truyền Bundle Email sang ProfileActivity
+                    val intent = Intent(this, ProfileActivity::class.java).apply {
+                        putExtra("EXTRA_USER_EMAIL", email)
+                    }
+                    startActivity(intent)
                 }
             }
         }
